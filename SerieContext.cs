@@ -7,6 +7,6 @@ namespace Flix
         public DbSet<Serie> Serie { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite(@"Data Source=C:\dio\cadastro-series-dotnet\seriesDB.db");
+            => options.UseSqlite(@"Data Source=seriesDB.db");
     }
 }
