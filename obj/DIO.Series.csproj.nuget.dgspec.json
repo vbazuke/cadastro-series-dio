@@ -1,32 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/home/eliezer/sandbox/dio/DIO.Series/DIO.Series.csproj": {}
+    "C:\\dio\\cadastro-series-dotnet\\DIO.Series.csproj": {}
   },
   "projects": {
-    "/home/eliezer/sandbox/dio/DIO.Series/DIO.Series.csproj": {
+    "C:\\dio\\cadastro-series-dotnet\\DIO.Series.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/eliezer/sandbox/dio/DIO.Series/DIO.Series.csproj",
+        "projectUniqueName": "C:\\dio\\cadastro-series-dotnet\\DIO.Series.csproj",
         "projectName": "DIO.Series",
-        "projectPath": "/home/eliezer/sandbox/dio/DIO.Series/DIO.Series.csproj",
-        "packagesPath": "/home/eliezer/.nuget/packages/",
-        "outputPath": "/home/eliezer/sandbox/dio/DIO.Series/obj/",
+        "projectPath": "C:\\dio\\cadastro-series-dotnet\\DIO.Series.csproj",
+        "packagesPath": "C:\\Users\\vbazu\\.nuget\\packages\\",
+        "outputPath": "C:\\dio\\cadastro-series-dotnet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/eliezer/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\vbazu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,6 +41,23 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -48,12 +68,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.13, 3.1.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

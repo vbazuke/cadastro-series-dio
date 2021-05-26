@@ -1,4 +1,4 @@
-namespace DIO.Series
+namespace Flix
 {
 	public enum Genero
 	{

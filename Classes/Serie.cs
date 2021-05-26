@@ -1,15 +1,15 @@
 using System;
 
-namespace DIO.Series
+namespace Flix
 {
     public class Serie : EntidadeBase
     {
         // Atributos
-		private Genero Genero { get; set; }
-		private string Titulo { get; set; }
-		private string Descricao { get; set; }
-		private int Ano { get; set; }
-        private bool Excluido {get; set;}
+		public Genero Genero { get; set; }
+		public string Titulo { get; set; }
+		public string Descricao { get; set; }
+		public int Ano { get; set; }
+		public bool Excluido {get; set;}
 
         // Métodos
 		public Serie(int id, Genero genero, string titulo, string descricao, int ano)
@@ -22,6 +22,8 @@ namespace DIO.Series
             this.Excluido = false;
 		}
 
+
+
         public override string ToString()
 		{
 			// Environment.NewLine https://docs.microsoft.com/en-us/dotnet/api/system.environment.newline?view=netcore-3.1
@@ -30,7 +32,7 @@ namespace DIO.Series
             retorno += "Titulo: " + this.Titulo + Environment.NewLine;
             retorno += "Descrição: " + this.Descricao + Environment.NewLine;
             retorno += "Ano de Início: " + this.Ano + Environment.NewLine;
-            retorno += "Excluido: " + this.Excluido;
+            retorno += "Excluido: " + (this.Excluido ? " SIM" : " NÃO");
 			return retorno;
 		}
 

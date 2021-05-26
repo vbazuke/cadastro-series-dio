@@ -1,13 +1,15 @@
 ﻿using System;
 
-namespace DIO.Series
+namespace Flix
 {
     class Program
     {
-        static SerieRepositorio repositorio = new SerieRepositorio();
-        static void Main(string[] args)
+		static public SerieContext _context;
+		static SerieRepositorio repositorio = new SerieRepositorio(_context);
+    
+		static void Main(string[] args)
         {
-            string opcaoUsuario = ObterOpcaoUsuario();
+			string opcaoUsuario = ObterOpcaoUsuario();
 
 			while (opcaoUsuario.ToUpper() != "X")
 			{
@@ -94,7 +96,8 @@ namespace DIO.Series
 		}
         private static void ListarSeries()
 		{
-			Console.WriteLine("Listar séries");
+			Console.WriteLine("Listagem de séries".ToUpper());
+			Console.WriteLine();
 
 			var lista = repositorio.Lista();
 
@@ -106,9 +109,16 @@ namespace DIO.Series
 
 			foreach (var serie in lista)
 			{
-                var excluido = serie.retornaExcluido();
-                
-				Console.WriteLine("#ID {0}: - {1} {2}", serie.retornaId(), serie.retornaTitulo(), (excluido ? "*Excluído*" : ""));
+                Boolean excluido = serie.retornaExcluido();
+
+				if (excluido)
+				{
+					Console.BackgroundColor = ConsoleColor.DarkRed;
+				}
+
+				Console.WriteLine(serie.ToString());
+				Console.BackgroundColor = ConsoleColor.Black;
+				Console.WriteLine("---------//---------");
 			}
 		}
 
